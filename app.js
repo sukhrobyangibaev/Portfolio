@@ -1,10 +1,19 @@
-var express = require("express");
-var app = express();
+const next = require("next");
+const express = require("express");
 
-app.get("/", function(req, res) {
-  res.send("Hello World! edited vscode version 2");
-});
+const dev = process.env.NODE_ENV !== "production";
+const app = next({ dev });
 
-app.listen(3000, function() {
-  console.log("Example app listening on port 3000!");
+app.prepare().then(() => {
+  const server = express();
+
+  server.get("/", function(req, res) {
+    res.send("Hello World!");
+  });
+
+  const PORT = process.env.PORT || 3000;
+  server.listen(PORT, err => {
+    if (err) throw err;
+    console.log(`> Server is on localhost:${PORT}`);
+  });
 });
