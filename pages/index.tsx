@@ -11,6 +11,47 @@ const IndexPage: NextPage = () => {
         <h1>Web Developer</h1>
         <div className="arrow"></div>
       </div>
+      <div className="canDo">
+        <h2>What can i do.</h2>
+        <div className="row">
+          <img src="canDo/front.jpeg" width="250" height="250"></img>
+          <div className="info">
+            Frontend
+            <span>
+              Architect and develop websites and applications using web
+              technologies (i.e., HTML, CSS, DOM, and JavaScript), which run on
+              the Open Web Platform or act as compilation input for non-web
+              platform environments.
+            </span>
+          </div>
+        </div>
+        <div className="row">
+          <div className="info">
+            Backend
+            <span>
+              Writing server-side code, writing code to interact with a
+              database, ensuring that the server-side code is secure and free of
+              vulnerabilities, ensuring that the server-side code is optimised
+              enough to handle large volumes of traffic.
+            </span>
+          </div>
+          <img src="canDo/back.png" width="250" height="250"></img>
+        </div>
+        <div className="row">
+          <img src="canDo/full.png" width="250" height="250"></img>
+          <div className="info">
+            Fullstack
+            <span>
+              Working with both, back-end and front-end technologies. More
+              specifically, it means I can work with server side languages,
+              databases, HTML, CSS, JavaScript and everything in between.
+            </span>
+          </div>
+        </div>
+
+        <h3>Backend</h3>
+        <h3>Fullstack</h3>
+      </div>
       <style jsx>{`
         .middleText {
           width: 100%;
@@ -32,15 +73,7 @@ const IndexPage: NextPage = () => {
           letter-spacing: 10px;
           text-align: center;
         }
-        @media (max-width: 650px) {
-          p {
-            font-size: 0.9em;
-          }
-          h1 {
-            font-size: 2em;
-            letter-spacing: 10px;
-          }
-        }
+
         .arrow:before {
           position: absolute;
           left: 50%;
@@ -79,6 +112,78 @@ const IndexPage: NextPage = () => {
           100% {
             opacity: 0;
             transform: translate(-10px, -10px);
+          }
+        }
+
+        .canDo {
+          width: 70%;
+          margin: 0 auto;
+          border: 1px solid lightgrey;
+          font-family: "Raleway", sans-serif;
+          text-align: center;
+          font-size: 2em;
+          font-weight: 300;
+        }
+
+        .row {
+          font-weight: 300;
+          display: flex;
+          text-align: left;
+          margin: 15px;
+        }
+        .info {
+          padding: 25px;
+        }
+
+        .info span {
+          font-size: 0.8em;
+          display: block;
+        }
+
+        @media (max-width: 1050px) {
+          .canDo {
+            width: 80%;
+          }
+          .info {
+            font-size: 0.9em;
+          }
+          img {
+            width: 200px;
+            height: 200px;
+          }
+        }
+        @media (max-width: 860px) {
+          .canDo {
+            width: 90%;
+          }
+          .info {
+            font-size: 0.8em;
+          }
+          img {
+            width: 200px;
+            height: 200px;
+          }
+        }
+        @media (max-width: 650px) {
+          p {
+            font-size: 0.9em;
+          }
+          h1 {
+            font-size: 2em;
+            letter-spacing: 10px;
+          }
+          h2 {
+            font-size: 1em;
+          }
+          .row {
+            font-size: 1em;
+            display: block;
+          }
+          .info {
+            padding: 10px 0;
+          }
+          img {
+            display: none;
           }
         }
       `}</style>
