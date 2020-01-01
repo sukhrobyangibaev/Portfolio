@@ -14,7 +14,7 @@ const IndexPage: NextPage = () => {
       <div className="canDo">
         <h2>What can i do.</h2>
         <div className="row">
-          <img src="canDo/front.jpeg" width="250" height="250"></img>
+          <img src="canDo/front.jpeg"></img>
           <div className="info">
             Frontend
             <span>
@@ -35,10 +35,10 @@ const IndexPage: NextPage = () => {
               enough to handle large volumes of traffic.
             </span>
           </div>
-          <img src="canDo/back.png" width="250" height="250"></img>
+          <img src="canDo/back.png"></img>
         </div>
         <div className="row">
-          <img src="canDo/full.png" width="250" height="250"></img>
+          <img src="canDo/full.png"></img>
           <div className="info">
             Fullstack
             <span>
@@ -48,9 +48,6 @@ const IndexPage: NextPage = () => {
             </span>
           </div>
         </div>
-
-        <h3>Backend</h3>
-        <h3>Fullstack</h3>
       </div>
       <style jsx>{`
         .middleText {
@@ -138,6 +135,10 @@ const IndexPage: NextPage = () => {
         .info span {
           font-size: 0.8em;
           display: block;
+        }
+        img {
+          width: 250px;
+          height: 250px;
         }
 
         @media (max-width: 1050px) {
