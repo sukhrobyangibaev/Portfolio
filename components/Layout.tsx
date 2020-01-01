@@ -8,7 +8,7 @@ type Props = {
 
 const Layout: React.FunctionComponent<Props> = ({
   children,
-  title = "layout title"
+  title = "Web Developer"
 }) => {
   useEffect(() => {
     console.log("effect");
@@ -26,6 +26,10 @@ const Layout: React.FunctionComponent<Props> = ({
     <div>
       <Head>
         <title>{title}</title>
+        <link
+          href="https://fonts.googleapis.com/css?family=Raleway:300,400&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
       <header>
         <div className="leftSide">
@@ -71,7 +75,6 @@ const Layout: React.FunctionComponent<Props> = ({
           display: flex;
           justify-content: space-between;
           align-items: center;
-          border: 1px solid black;
           font-size: 25px;
           transition: background 500ms;
         }
@@ -115,6 +118,14 @@ const Layout: React.FunctionComponent<Props> = ({
           background-repeat: no-repeat;
           z-index: -1;
           opacity: 1;
+        }
+        @media (max-width: 650px) {
+          .rightSide {
+            display: none;
+          }
+          header {
+            justify-content: center;
+          }
         }
       `}</style>
     </div>
